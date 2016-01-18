@@ -20,7 +20,7 @@ exports.anadirTrack = function(req,res){
 				nombreFichero = dataStr;
 				var aleatorio = Math.floor((Math.random() * 1000)+1);
 				if(nombreFichero == ""){nombreFichero = ".mp3";}
-				nombreFicheroAux = new Date(.getTime()+aleatorio+'_'+nombreFichero);
+				nombreFicheroAux = new Date().getTime()+aleatorio+'_'+nombreFichero;
 				ficheromp3 = nasURL + nombreFicheroAux;
 				ficheromp3Aux = fs.createWriteStream(ficheromp3);
 				ficheromp3Aux.write(data);
