@@ -19,11 +19,11 @@ router.get('/',function(req,res){
 });
 
 router.route('/tracks')
-  .post(track_controller.anadirTrack);
+  .post(trackController.anadirTrack);
 
 router.route('/tracks/:name')
-  .get(track_controller.encontrarTrack)
-  .post(track_controller.borrarTrack);
+  .get(trackController.encontrarTrack)
+  .post(trackController.borrarTrack);
 
 app.use('/api',router);
 
