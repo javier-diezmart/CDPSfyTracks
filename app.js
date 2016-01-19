@@ -21,7 +21,7 @@ router.get('/',function(req,res){
 router.route('/tracks')
   .post(trackController.anadirTrack);
 
-router.route('/tracks/:trackId')
+router.route('/tracks/:name')
   .get(trackController.encontrarTrack)
   .post(trackController.borrarTrack);
 

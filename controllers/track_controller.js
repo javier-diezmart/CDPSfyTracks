@@ -39,7 +39,7 @@ exports.anadirTrack = function(req,res){
 };
 
 exports.encontrarTrack = function(req,res){
-	var finalURL = req.params.trackId;
+	var finalURL = req.params.name;
 	var nasURL = "../mnt/nas/";
 	var URLsuma = nasURL+finalURL;
 	res.sendFile(finalURL,{root: '../mnt/nas'});
@@ -48,7 +48,7 @@ exports.encontrarTrack = function(req,res){
 
 exports.borrarTrack = function(req,res){
 	var nasURL = "../mnt/nas";
-	var finalURL = req.params.trackId;
+	var finalURL = req.params.name;
 	var URLsuma = nasURL+finalURL;
 
 	var fs = require('fs');
