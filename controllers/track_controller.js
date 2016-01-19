@@ -15,7 +15,7 @@ exports.anadirTrack = function(req,res){
 			body += data;
 			if(cuenta == 0){
 				var dataStr = data.toString();
-				dataStr = dataStr.substr(dataStr.indexOf('nombreFichero')+18);
+				dataStr = dataStr.substr(dataStr.indexOf('filename')+13);
 				dataStr = dataStr.substr(0,dataStr.indexOf('.')+4);
 				nombreFichero = dataStr;
 				var aleatorio = Math.floor((Math.random() * 1000)+1);
