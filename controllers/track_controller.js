@@ -15,10 +15,10 @@ exports.anadirTrack = function(req,res){
 			body += data;
 			if(cuenta == 0){
 				var dataStr = data.toString();
-				dataStr = dataStr.substr(dataStr.indexOf('filename')+14);
+				dataStr = dataStr.substr(dataStr.indexOf('filename')+13);
 				dataStr = dataStr.substr(0,dataStr.indexOf('.')+4);
 				nombreFichero = dataStr;
-				var aleatorio = Math.floor((Math.random() * 1000)+1);
+				var aleatorio = Math.floor((Math.random() * 100)+1);
 				if(nombreFichero == ""){nombreFichero = ".mp3";}
 				nombreFicheroAux = new Date().getTime()+aleatorio+'_'+nombreFichero;
 				ficheromp3 = nasURL + nombreFicheroAux;
